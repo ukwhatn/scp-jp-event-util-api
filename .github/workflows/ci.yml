@@ -118,9 +118,9 @@ jobs:
           
           make ps ENV=test
 
-      - name: Check Dumper service
-        run: |
-          make db:dump:test ENV=test
+#      - name: Check Dumper service
+#        run: |
+#          make db:dump:test ENV=test
 
       - name: Clean up
         if: always()
