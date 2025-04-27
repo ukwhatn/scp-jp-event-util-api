@@ -75,7 +75,7 @@ class ChartDataCache:
     data: List[ChartDataItem]
 
     # キャッシュの有効期限 (10分)
-    cache_duration: int = 20
+    cache_duration: int = 60 * 10
 
     # キャッシュの有効期限を確認
     def is_cache_valid(self) -> bool:
@@ -84,8 +84,6 @@ class ChartDataCache:
 
 # キャッシュを保持する辞書
 chart_data_cache: ChartDataCache | None = None
-
-cache_dict = {}
 
 SAFE_TAGS = "+safe -explained -コンテスト"
 EUCLID_TAGS = "+euclid -explained -コンテスト"
@@ -97,7 +95,7 @@ router = APIRouter()
 
 @router.get("/chart-data", response_model=ChartDataResponse)
 def get_chart_data(
-    debug: bool = False,
+        debug: bool = False,
 ):
     global chart_data_cache
 
