@@ -13,14 +13,13 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 from api import api_router
 from core import APIError, ErrorResponse, ValidationError, get_settings
 from core.middleware import SecurityHeadersMiddleware
-from utils import SessionCrud, SessionSchema
 
 # 設定読み込み
 settings = get_settings()
 
 # アプリケーション設定
 app_params = {
-    "title": "FastAPI Template",
+    "title": "SCP-JP Event Util API",
     "description": "FastAPIアプリケーションのテンプレート",
     "version": "0.1.0",
 }
@@ -181,20 +180,20 @@ async def error_response(request: Request, call_next):
 
 
 # セッション管理ミドルウェア
-@app.middleware("http")
-async def session_creator(request: Request, call_next):
-    with SessionCrud() as session_crud:
-        req_session_data = session_crud.get(request)
-        if req_session_data is None:
-            req_session_data = SessionSchema()
-        request.state.session = req_session_data
-
-    response = await call_next(request)
-
-    with SessionCrud() as session_crud:
-        res_session_data = request.state.session
-        session_crud.update(request, response, res_session_data)
-    return response
+# @app.middleware("http")
+# async def session_creator(request: Request, call_next):
+#     with SessionCrud() as session_crud:
+#         req_session_data = session_crud.get(request)
+#         if req_session_data is None:
+#             req_session_data = SessionSchema()
+#         request.state.session = req_session_data
+#
+#     response = await call_next(request)
+#
+#     with SessionCrud() as session_crud:
+#         res_session_data = request.state.session
+#         session_crud.update(request, response, res_session_data)
+#     return response
 
 
 # 静的ファイル設定

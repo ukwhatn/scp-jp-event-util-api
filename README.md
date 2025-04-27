@@ -1,4 +1,4 @@
-# FastAPI Template
+# SCP-JP Event Util API
 
 ## コマンド
 ### 環境構築
