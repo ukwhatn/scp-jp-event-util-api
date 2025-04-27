@@ -13,7 +13,6 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 from api import api_router
 from core import APIError, ErrorResponse, ValidationError, get_settings
 from core.middleware import SecurityHeadersMiddleware
-from utils import SessionCrud, SessionSchema
 
 # 設定読み込み
 settings = get_settings()
