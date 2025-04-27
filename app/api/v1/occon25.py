@@ -85,8 +85,6 @@ class ChartDataCache:
 # キャッシュを保持する辞書
 chart_data_cache: ChartDataCache | None = None
 
-cache_dict = {}
-
 SAFE_TAGS = "+safe -explained -コンテスト"
 EUCLID_TAGS = "+euclid -explained -コンテスト"
 KETER_TAGS = "+keter -explained -コンテスト"
@@ -97,7 +95,7 @@ router = APIRouter()
 
 @router.get("/chart-data", response_model=ChartDataResponse)
 def get_chart_data(
-    debug: bool = False,
+        debug: bool = False,
 ):
     global chart_data_cache
 
