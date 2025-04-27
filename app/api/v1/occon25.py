@@ -75,7 +75,7 @@ class ChartDataCache:
     data: List[ChartDataItem]
 
     # キャッシュの有効期限 (10分)
-    cache_duration: int = 20
+    cache_duration: int = 60 * 10
 
     # キャッシュの有効期限を確認
     def is_cache_valid(self) -> bool:
