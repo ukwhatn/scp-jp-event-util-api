@@ -6,7 +6,7 @@ services:
       dockerfile: docker/server.Dockerfile
     command: [ "/bin/sh", "-c", "fastapi run main.py --host 0.0.0.0 --port 80 --proxy-headers" ]
     ports:
-      - "127.0.0.1:59999:80"
+      - "127.0.0.1:59107:80"
     volumes:
       - ./app:/app
       - ./newrelic.ini:/etc/newrelic.ini
