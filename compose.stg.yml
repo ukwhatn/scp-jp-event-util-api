@@ -1,6 +1,6 @@
 services:
   server:
-    container_name: fastapi-template-server
+    container_name: scp-jp-event-util-api-server
     build:
       context: .
       dockerfile: docker/server.Dockerfile
@@ -33,7 +33,7 @@ services:
       - redis
 
   db:
-    container_name: fastapi-template-db
+    container_name: scp-jp-event-util-api-db
     image: postgres:17
     env_file:
       - ./envs/db.env
@@ -52,7 +52,7 @@ services:
       - db
 
   redis:
-    container_name: fastapi-template-redis
+    container_name: scp-jp-event-util-api-redis
     image: redis:7.4.1
     volumes:
       - redis_data:/data
@@ -66,7 +66,7 @@ services:
       - redis
 
   db-migrator:
-    container_name: fastapi-template-db-migrator
+    container_name: scp-jp-event-util-api-db-migrator
     image: ghcr.io/ukwhatn/psql-migrator:latest
     volumes:
       - ./versions:/app/versions
@@ -82,7 +82,7 @@ services:
       - db
 
   db-dumper:
-    container_name: fastapi-template-db-dumper
+    container_name: scp-jp-event-util-api-db-dumper
     image: ghcr.io/ukwhatn/psql-dumper:latest
     env_file:
       - ./envs/db.env

@@ -20,7 +20,7 @@ settings = get_settings()
 
 # アプリケーション設定
 app_params = {
-    "title": "FastAPI Template",
+    "title": "SCP-JP Event Util API",
     "description": "FastAPIアプリケーションのテンプレート",
     "version": "0.1.0",
 }

@@ -85,7 +85,7 @@ class Settings(BaseSettings):
 
     # New Relic設定
     NEW_RELIC_LICENSE_KEY: Optional[str] = None
-    NEW_RELIC_APP_NAME: str = "FastAPI Template"
+    NEW_RELIC_APP_NAME: str = "SCP-JP Event Util API"
     NEW_RELIC_HIGH_SECURITY: bool = False
     NEW_RELIC_MONITOR_MODE: bool = True
 
