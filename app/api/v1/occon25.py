@@ -119,7 +119,7 @@ def get_chart_data(
                 limit="30" if debug else None,
             )
             other_articles = site.pages.search(
-                tags=OTHER_TAGS + (" +occon" if debug else ""),
+                tags=OTHER_TAGS + (" +occon" if not debug else ""),
                 limit="30" if debug else None,
             )
 
