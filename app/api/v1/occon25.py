@@ -136,7 +136,7 @@ def get_chart_data(
                 value=safe_rating,
                 color="#90ee90",
                 image1=HttpUrl(
-                    "https://scp-jp-storage.wdfiles.com/local--files/file%3A7737619-165-q25y/sehukun1.png"
+                    "https://scp-jp-storage.wdfiles.com/local--files/file%3A7737619-165-q25y/sehukun3.png"
                 ),
                 image2=HttpUrl(
                     "https://scp-jp-storage.wdfiles.com/local--files/file%3A7737619-166-f6v1/sehukun2.png"
