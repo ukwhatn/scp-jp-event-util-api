@@ -122,10 +122,10 @@ def get_chart_data(
             )
 
             # 各記事のratingを合算
-            safe_rating = sum(article.rating for article in safe_articles)
-            euclid_rating = sum(article.rating for article in euclid_articles)
-            keter_rating = sum(article.rating for article in keter_articles)
-            other_rating = sum(article.rating for article in other_articles)
+            safe_rating = sum(article.rating for article in safe_articles if article.rating >= 0)
+            euclid_rating = sum(article.rating for article in euclid_articles if article.rating >= 0)
+            keter_rating = sum(article.rating for article in keter_articles if article.rating >= 0)
+            other_rating = sum(article.rating for article in other_articles if article.rating >= 0)
 
         # returnデータビルド
         items = [
