@@ -96,10 +96,11 @@ router = APIRouter()
 @router.get("/chart-data", response_model=ChartDataResponse)
 def get_chart_data(
         debug: bool = False,
+        no_cache: bool = False,
 ):
     global chart_data_cache
 
-    if debug or (chart_data_cache is None or not chart_data_cache.is_cache_valid()):
+    if debug or no_cache or (chart_data_cache is None or not chart_data_cache.is_cache_valid()):
         logging.info("Fetching new data from Wikidot")
         with wikidot.Client() as wd_client:
             site = wd_client.site.get("scp-jp")
