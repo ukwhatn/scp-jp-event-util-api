@@ -198,7 +198,7 @@ async def error_response(request: Request, call_next):
 
 
 # 静的ファイル設定
-app.mount("/public", StaticFiles(directory="app/public"), name="public")
+app.mount("/public", StaticFiles(directory="/app/public"), name="public")
 
 # ルーター登録
 app.include_router(api_router)
