@@ -135,10 +135,10 @@ def get_chart_data(
                 value=safe_rating,
                 color="#90ee90",
                 image1=HttpUrl(
-                    "https://scp-jp-storage.wdfiles.com/local--files/file%3A7737619-165-q25y/sehukun3.png"
+                    "/public/assets/occon25/safe1.png"
                 ),
                 image2=HttpUrl(
-                    "https://scp-jp-storage.wdfiles.com/local--files/file%3A7737619-166-f6v1/sehukun2.png"
+                    "/public/assets/occon25/safe2.png"
                 ),
                 fallbackText="Safe1",
                 fallbackText2="Safe2",
@@ -148,10 +148,10 @@ def get_chart_data(
                 value=euclid_rating,
                 color="#ffff00",
                 image1=HttpUrl(
-                    "https://scp-jp-storage.wdfiles.com/local--files/file%3A7737619-166-g6cv/yukuriddokun1.png"
+                    "/public/assets/occon25/euclid1.png"
                 ),
                 image2=HttpUrl(
-                    "https://scp-jp-storage.wdfiles.com/local--files/file%3A7737619-166-bvj7/yujuriddokun2.png"
+                    "/public/assets/occon25/euclid2.png"
                 ),
                 fallbackText="Euclid1",
                 fallbackText2="Euclid2",
@@ -161,10 +161,10 @@ def get_chart_data(
                 value=keter_rating,
                 color="#ff0000",
                 image1=HttpUrl(
-                    "https://scp-jp-storage.wdfiles.com/local--files/file%3A7737619-166-m7bg/keterukun1.png"
+                    "/public/assets/occon25/keter1.png"
                 ),
                 image2=HttpUrl(
-                    "https://scp-jp-storage.wdfiles.com/local--files/file%3A7737619-166-rinw/keterukun2.png"
+                    "/public/assets/occon25/keter2.png"
                 ),
                 fallbackText="Keter1",
                 fallbackText2="Keter2",
@@ -174,10 +174,10 @@ def get_chart_data(
                 value=other_rating,
                 color="#ee82ee",
                 image1=HttpUrl(
-                    "https://scp-jp-storage.wdfiles.com/local--files/file%3A7737619-166-bdix/%E7%94%BB%E5%83%8F1.png"
+                    "/public/assets/occon25/other1.png"
                 ),
                 image2=HttpUrl(
-                    "https://scp-jp-storage.wdfiles.com/local--files/file%3A7737619-166-p1mw/%E7%94%BB%E5%83%8F2.png"
+                    "/public/assets/occon25/other2.png"
                 ),
                 fallbackText="Other1",
                 fallbackText2="Other2",
