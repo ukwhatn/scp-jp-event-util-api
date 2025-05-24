@@ -8,6 +8,7 @@ from fastapi import FastAPI, Request, Response
 from fastapi.encoders import jsonable_encoder
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from api import api_router
@@ -197,7 +198,7 @@ async def error_response(request: Request, call_next):
 
 
 # 静的ファイル設定
-# app.mount("/static", StaticFiles(directory="/app/static"), name="static")
+app.mount("/public", StaticFiles(directory="app/public"), name="public")
 
 # ルーター登録
 app.include_router(api_router)
