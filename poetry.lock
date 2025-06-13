@@ -2283,20 +2283,20 @@ files = [
 
 [[package]]
 name = "wikidot"
-version = "3.1.0.dev12"
+version = "3.1.0.dev13"
 description = "Wikidot Utility Library"
 optional = false
 python-versions = ">=3.10"
 groups = ["server"]
 files = [
-    {file = "wikidot-3.1.0.dev12-py3-none-any.whl", hash = "sha256:e9228bebc079fa560666d4d1c94631a6a9a7ddd6d88c59cc10b41acba10587bf"},
-    {file = "wikidot-3.1.0.dev12.tar.gz", hash = "sha256:a71d9c8f50a589d1276f00e0e2d90f2a828a7b225c51a479936885235ca6ad4e"},
+    {file = "wikidot-3.1.0.dev13-py3-none-any.whl", hash = "sha256:f10fe95495b17b7d58f68b1673a2083b9a04a7b2d199da9fa45fa09f6204293a"},
+    {file = "wikidot-3.1.0.dev13.tar.gz", hash = "sha256:36452fbb31f4748f7b5cffcbe5a87f72ae076349164d01b63d129c5a623ea7b0"},
 ]
 
 [package.dependencies]
 beautifulsoup4 = ">=4.12.2,<4.14.0"
 httpx = ">=0.25,<0.29"
-lxml = ">=4.9.3,<5.4.0"
+lxml = ">=4.9.3,<5.5.0"
 
 [package.extras]
 build = ["build", "twine"]
@@ -2416,4 +2416,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10"
-content-hash = "d2305cc91c2b9b41903241c4578c82525b25d299f7b24f73afeceb172eb30a85"
+content-hash = "084e3480cf418ce3d14ac0850c25e833a26e135a56c9cb91f265be2c9958c143"
