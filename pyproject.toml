@@ -12,7 +12,7 @@ python = "^3.10"
 optional = true
 [tool.poetry.group.server.dependencies]
 redis = "^7.0.1"
-fastapi = {extras = ["standard"], version = "^0.118.0"}
+fastapi = {extras = ["standard"], version = "^0.123.6"}
 sentry-sdk = {extras = ["fastapi"], version = "^2.19.2"}
 newrelic = "^11.0.0"
 wikidot = "3.1.0.dev13"
